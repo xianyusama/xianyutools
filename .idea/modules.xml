@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/xutildemo.iml" filepath="$PROJECT_DIR$/xutildemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xutildemo.iml" filepath="$PROJECT_DIR$/xutildemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xyutils/xyutils.iml" filepath="$PROJECT_DIR$/xyutils/xyutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/xyutils/xyutils.iml" filepath="$PROJECT_DIR$/xyutils/xyutils.iml" />
     </modules>
   </component>

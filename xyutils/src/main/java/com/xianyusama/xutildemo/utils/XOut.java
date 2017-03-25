@@ -1,5 +1,7 @@
 package com.xianyusama.xutildemo.utils;
 
+import java.util.List;
+
 /**
  * Created by xiao on 2016/12/22.
  * 【Console工具类】
@@ -34,19 +36,6 @@ public class XOut {
         }
     }
 
-    public static void print(Object object) {
-        if (DEBUG) {
-            p(object);
-        }
-    }
-
-
-    public static void print(Class<?> clazz) {
-        if (DEBUG) {
-            p(clazz);
-        }
-    }
-
     public static void print(String... messages) {
         if (DEBUG) {
             StringBuffer stringBuffer = new StringBuffer();
@@ -54,6 +43,12 @@ public class XOut {
                 stringBuffer.append(messages[i] + "\t");
             }
             p(stringBuffer.toString());
+        }
+    }
+
+    public static void print(Object object) {
+        if (DEBUG) {
+            p(object);
         }
     }
 
@@ -66,4 +61,22 @@ public class XOut {
             p(stringBuffer.toString());
         }
     }
+
+    public static void print(Class<?> clazz) {
+        if (DEBUG) {
+            p(clazz);
+        }
+    }
+
+    public static void print(List<? extends Object> lists) {
+        if (DEBUG) {
+            StringBuffer stringBuffer = new StringBuffer();
+            for (Object obj : lists) {
+                stringBuffer.append(obj.getClass().getSimpleName() + " = " + obj + "\t");
+            }
+            p(stringBuffer.toString());
+        }
+    }
+
+
 }

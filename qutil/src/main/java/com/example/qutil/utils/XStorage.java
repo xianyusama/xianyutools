@@ -1,4 +1,4 @@
-package com.xianyusama.xutildemo.utils;
+package com.example.qutil.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

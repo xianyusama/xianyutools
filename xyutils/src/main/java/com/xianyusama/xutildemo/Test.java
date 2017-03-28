@@ -1,28 +1,27 @@
 package com.xianyusama.xutildemo;
 
-import android.app.Activity;
+
 import android.os.Bundle;
 
+import com.alibaba.fastjson.JSON;
+import com.xianyusama.xutildemo.logger.Logger;
 import com.xianyusama.xutildemo.model.User;
-import com.xianyusama.xutildemo.utils.XOut;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.xianyusama.xutildemo.ui.base.BaseLogActivity;
+import com.example.qutil.utils.klog.KLog;
 
 /**
  * Created by xkq on 2017/3/25.
  */
 
-public class Test extends Activity {
+public class Test extends BaseLogActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        List<User> users = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-
-            users.add(new User("xiao" + i, "age" + i));
-        }
-        XOut.print(users);
-
+        Logger.init("TAG");
+        User user = new User("zhouxingxing", "54");
+        String json = JSON.toJSONString(user);
+//        Logger.json(json);
+        KLog.json(json);
+        KLog.i(user);
     }
 }

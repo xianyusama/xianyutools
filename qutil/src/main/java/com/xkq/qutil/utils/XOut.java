@@ -1,4 +1,4 @@
-package com.example.qutil.utils;
+package com.xkq.qutil.utils;
 
 import java.util.List;
 

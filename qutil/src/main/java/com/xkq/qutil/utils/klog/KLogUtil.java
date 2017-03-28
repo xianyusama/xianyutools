@@ -1,4 +1,4 @@
-package com.example.qutil.utils.klog;
+package com.xkq.qutil.utils.klog;
 
 import android.text.TextUtils;
 import android.util.Log;

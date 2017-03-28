@@ -3,7 +3,7 @@ package com.xianyusama.xutildemo.ui.base;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.example.qutil.utils.XLog;
+import com.xkq.qutil.utils.XLog;
 
 /**
  * Created by xiao on 2017/3/27.

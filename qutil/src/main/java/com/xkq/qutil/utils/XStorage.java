@@ -1,4 +1,4 @@
-package com.example.qutil.utils;
+package com.xkq.qutil.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

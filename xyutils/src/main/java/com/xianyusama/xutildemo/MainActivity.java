@@ -3,7 +3,7 @@ package com.xianyusama.xutildemo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.qutil.utils.XLog;
+import com.xkq.qutil.utils.XLog;
 
 
 public class MainActivity extends AppCompatActivity {

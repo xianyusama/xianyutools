@@ -1,9 +1,10 @@
-package com.example.qutil.utils.klog;
+package com.xkq.qutil.utils.klog;
 
 
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
+
+import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.PrintWriter;

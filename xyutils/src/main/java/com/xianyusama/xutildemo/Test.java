@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSON;
 import com.xianyusama.xutildemo.logger.Logger;
 import com.xianyusama.xutildemo.model.User;
 import com.xianyusama.xutildemo.ui.base.BaseLogActivity;
-import com.example.qutil.utils.klog.KLog;
+import com.xkq.qutil.utils.klog.KLog;
 
 /**
  * Created by xkq on 2017/3/25.

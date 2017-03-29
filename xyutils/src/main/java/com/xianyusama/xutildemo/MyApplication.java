@@ -2,6 +2,7 @@ package com.xianyusama.xutildemo;
 
 import android.app.Application;
 
+import com.xkq.httputil.XYHttp;
 import com.xkq.qutil.utils.klog.KLog;
 import com.zhy.http.okhttp.OkHttpUtils;
 
@@ -17,7 +18,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        KLog.init(true, "TAG");
+        KLog.init(true, "UTIL");
 
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -26,7 +27,7 @@ public class MyApplication extends Application {
                 .readTimeout(10000L, TimeUnit.MILLISECONDS)
                 //其他配置
                 .build();
-
+//        XYHttp.initClient(okHttpClient);
         OkHttpUtils.initClient(okHttpClient);
     }
 }

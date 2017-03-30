@@ -65,34 +65,45 @@ public class UploadActivity extends Activity implements View.OnClickListener {
             case R.id.btn_select:
 
 
-                final XYHttp xyHttp = new XYHttp.Builder()
-                        .post()
-                        .url("http://v.juhe.cn/toutiao/index")
-                        .addParam("type", "top")
-                        .addParam("key", "90139c3055bd2345d52ce2c76985f085")
-                        .tag("zheshishenme")
-                        .addHeader("Accept", "application/json; q=0.5")
-                        .build();
-                xyHttp.enqueue(new com.xkq.httputil.StringCallback() {
-                    @Override
-                    protected void handleError(Call call, IOException e) {
-                        super.handleError(call, e);
-                    }
-
-                    @Override
-                    protected void handleResponse(Call call, String response) {
-                        super.handleResponse(call, response);
-                    }
-                });
+//                final XYHttp xyHttp = new XYHttp.Builder()
+//                        .post()
+//                        .url("http://v.juhe.cn/toutiao/index")
+//                        .addParam("type", "top")
+//                        .addParam("key", "90139c3055bd2345d52ce2c76985f085")
+//                        .tag("zheshishenme")
+//                        .addHeader("Accept", "application/json; q=0.5")
+//                        .build();
+//                xyHttp.enqueue(new com.xkq.httputil.StringCallback() {
+//                    @Override
+//                    protected void handleError(Call call, IOException e) {
+//                        super.handleError(call, e);
+//                    }
+//
+//                    @Override
+//                    protected void handleResponse(Call call, String response) {
+//                        super.handleResponse(call, response);
+//                    }
+//                });
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("*/*");
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                try {
+                    startActivityForResult(Intent.createChooser(intent, "请选择文件!"),
+                            1);
+                } catch (android.content.ActivityNotFoundException ex) {
+                    // Potentially direct the user to the Market with a Dialog
+                    Toast.makeText(this, "请安装文件管理器", Toast.LENGTH_SHORT).show();
+                }
 
 
                 break;
             case R.id.btn_upload:
+                ///storage/emulated/0/DCIM/ZyfVideo/VID_20170322_165204.mp4
                 if (localurl != null) {
                     File file = new File(localurl);
                     OkHttpUtils.post()//
-                            .addFile("tobu", "Caelum.mp3", file)//
-                            .url("http://192.168.1.146:8080/t01/Upload")
+                            .addFile("tobu", file.getName(), file)//
+                            .url("http://192.168.1.146:8080/upload/UploadServer")
 //                            .params(params)//
 //                            .headers(headers)//
                             .build()//
